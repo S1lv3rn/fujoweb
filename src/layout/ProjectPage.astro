@@ -1,0 +1,97 @@
+---
+import Header from "../components/Header.astro"
+import Image from "../components/Image.astro"
+import Footer from "../components/Footer.astro"
+import Update from "../components/Update.astro"
+import PageLayout from "./PageLayout.astro"
+---
+
+<PageLayout>
+    <Header>
+
+        <main>
+            <article>
+                <h2>Project Name</h2>
+        
+                <p>Updated on: date <br> Created on: date</p>
+                <p>Tags: <a href="">tag1</a>, <a href="">tag2</a></p>
+                <Image>
+        
+                <nav>
+                    <h3>Contents</h3>
+                    <hr>
+                    <ul>
+                        <li><a href="">Description</a></li>
+                        <li><a href="">Gallery</a></li>
+                        <li><a href="">Updates</a></li>
+                        <li><a href="">Links</a></li>
+                    </ul>
+                </nav>
+        
+                <section>
+                    <h3>Description</h3>
+                    <hr>
+        
+                    <p>Project description, contiaing such things as:</p>
+                    <ul>
+                        <li>what is the project</li>
+                        <li>what i want to achive</li>
+                        <li>why the project</li>
+                    </ul>
+                    <a href="">To Contents</a>
+                </section>
+        
+                <section>
+                    <h3>Gallery</h3>
+                    <hr>
+                    <Image>
+        
+                    <Image>
+        
+                    <Image>
+        
+                    <a href="">To Contents</a>
+                </section>
+        
+                <section>
+                    <h3>Related Projects</h3>
+        
+                    <ul>
+                        <li><a href="">Project 1</a></li>
+                        <li><a href="">Project 2</a></li>
+                        <li><a href="">Project 3</a></li>
+                    </ul>
+                    <a href="">To Contents</a>
+                </section>
+                
+        
+                <section>
+                    <h3>Updates</h3>
+                    <select name="updates" id="updates-sort">
+                        <option value="">~Select Sort Order~</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="newest">Newest First</option>
+                    </select>
+        
+                    <hr>
+        
+                    <Update>
+                    
+                    <Update>
+                
+                    <Update>
+        
+                    <a href="">To Contents</a>
+                </section>
+        
+                
+            </article>
+        </main>
+        
+        
+        
+        
+        
+        
+        <Footer>
+</PageLayout>
