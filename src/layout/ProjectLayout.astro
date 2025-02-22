@@ -1,0 +1,47 @@
+---
+
+import PageLayout from './PageLayout.astro';
+const { frontmatter } = Astro.props;
+---
+<PageLayout pageTitle={frontmatter.title}>
+
+    <h2>{frontmatter.title}</h2>
+    <p>Created on {frontmatter.pubDate.toString()}</p>
+    <p>Updated on {frontmatter.author}</p>
+    <slot />
+    <article>
+        <h2>{frontmatter.title}</h2>
+        <p>Created on: {frontmatter.pubDate.toString()}</p>
+        <p>Updated on: {frontmatter.pubDate.toString()}</p>
+        <p>Tags: <a href="">tag1</a>, <a href="">tag2</a></p>
+        <br>
+
+        <nav>
+            <h3 id="project-nav">Contents</h3>
+            <hr>
+            <ul>
+                <li><a href="#project-desc">Description</a></li>
+                <li><a href="#project-updates">Updates</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h3 id="project-desc">Description</h3>
+            <hr>
+
+            <slot name="description"/>
+            <a href="#project-nav">To Contents</a>
+        </section>
+
+        
+
+        <section>
+            <h3 id="project-updates">Updates</h3>
+            <hr>
+
+            <slot name="updates" />
+
+            <a href="#project-nav">To Contents</a>
+        </section>
+    </article>
+</PageLayout>

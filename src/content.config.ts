@@ -17,14 +17,18 @@ const blog = defineCollection({
     })
 });
 
-// const images = defineCollection({
-//     loader:glob({ pattern: '**/[^_]*.json', base: "./src/images" }),
-//     schema:  z.object({
-//         url: z.string().url(),
-//         alt: z.string(),
-//         subtitle: z.string()
-//       })
-// })
+const projects = defineCollection({
+    loader: glob({ pattern: '**/[^_]*.md', base: "./src/projects" }),
+    schema: z.object({
+      title: z.string(),
+      pubDate: z.date(),
+      updDate: z.date(),
+      miniDesc: z.string(),
+      todo: z.array(z.string()),
+      tags: z.array(z.string())
+    })
+});
+
 
 // Export a single `collections` object to register your collection(s)
-export const collections = { blog };
+export const collections = { blog, projects};
