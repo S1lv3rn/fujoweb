@@ -2,11 +2,13 @@
 import Image from "../components/Image.astro"
 import Update from "../components/Update.astro"
 import PageLayout from "./PageLayout.astro"
+const title = "Project Name"
+
 ---
 
-<PageLayout>
+<PageLayout pagetTitle = {title}>
     <article>
-        <h2>Project Name</h2>
+        <h2>{title}</h2>
 
         <p>Updated on: date <br> Created on: date</p>
         <p>Tags: <a href="">tag1</a>, <a href="">tag2</a></p>
